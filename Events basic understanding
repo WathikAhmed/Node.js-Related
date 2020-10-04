@@ -1,0 +1,12 @@
+const EventEmitter = require('events');
+
+class MyEmitter extends EventEmitter {}
+
+// Register a listener
+const myEmitter = new MyEmitter();
+myEmitter.on('event', () => {
+  console.log('an event occurred!');
+});
+
+// Raise an event
+myEmitter.emit('event');
