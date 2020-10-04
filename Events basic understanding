@@ -4,9 +4,9 @@ class MyEmitter extends EventEmitter {}
 
 // Register a listener
 const myEmitter = new MyEmitter();
-myEmitter.on('event', () => {
-  console.log('an event occurred!');
+myEmitter.on('event', (arg) => {
+  console.log('an event occurred!', arg);
 });
 
 // Raise an event
-myEmitter.emit('event');
+myEmitter.emit('event', {id:1,url:'http://'});
